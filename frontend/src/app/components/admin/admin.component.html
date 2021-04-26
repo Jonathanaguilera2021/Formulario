@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"> 
+            Contenido
+        </div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+             </table>
+             <thead>
+                 <th>Nombre</th>
+                 <th>Precio</th>
+                 <th>Category</th>
+                 <th>Marca</th>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let producto of productService.products">
+                     <td>{{producto.name}}</td>
+                     <td>{{producto.price}}</td>
+                     <td>{{producto.category}}</td>
+                     <td>{{producto.brand}}</td>
+                     <td>
+                         <a (click)="updateService()" class="btn btn-warning">Editar</a>
+                         <a (click)="deleteService()" class="gtn btn-danger">Eliminar</a>
+                    </td>
+                 </tr>
+             </tbody>
+        </div>
+    </div>
+</div>
